@@ -20,8 +20,7 @@ public class User {
 	private Integer id;
 	private String name;
 	private Date createdAt;
-	private Date modifiedAt;
-	private String password;
+	private Date modifiedAt;	
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnore
@@ -38,8 +37,7 @@ public class User {
 		this.id = id;
 		this.name = name;
 		this.createdAt = new Date();
-		this.modifiedAt = null;
-		this.password = password;
+		this.modifiedAt = null;		
 	}
 	public Integer getId() {
 		return id;
@@ -69,15 +67,7 @@ public class User {
 
 	public void setTasks(List<Task> tasks) {
 		this.tasks = tasks;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	}	
 
 	@Override
 	public String toString() {
